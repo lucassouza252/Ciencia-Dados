@@ -1,2 +1,2 @@
 # A Arte é Ciencia de Dados
-- Parafrezeando Deidara (Modificado)
+\- Parafrezeando Deidara (Modificado)
