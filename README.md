@@ -1,4 +1,4 @@
-# The Art is Data Science
+# *The Art is Data Science*
 
 ## Repository for studies about Data Science and Artificial Intelligence.
 
