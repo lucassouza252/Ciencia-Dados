@@ -118,26 +118,22 @@ class Network(object):
             nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
             nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
         
-        self.weights = [w-(eta/len(mini_batch)) + nw for w, nw in zip(self.weights, nabla_w)]
-        self.biases = [d-(eta/len(mini_batch)) + nb for d, nb in zip(self.biases, nabla_b)]
+        self.weights = [w-(eta/len(mini_batch))*nw for w, nw in zip(self.weights, nabla_w)]
+        self.biases = [d-(eta/len(mini_batch))*nb for d, nb in zip(self.biases, nabla_b)]
         
     def backprop(self, x, y):
         """
+        Back Propagation algorithm for processing the information and optmize the error.
         
-
         Parameters
         ----------
-        x : TYPE
-            DESCRIPTION.
-        y : TYPE
-            DESCRIPTION.
+        x : Training data in sample.
+        y : Target data in sample.
 
         Returns
         -------
-        nabla_b : TYPE
-            DESCRIPTION.
-        nabla_w : TYPE
-            DESCRIPTION.
+        nabla_b : Gradient error for bias.
+        nabla_w : Gradient error for weights.
 
         """
         nabla_b = [np.zeros(b.shape) for b in self.biases]
