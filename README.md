@@ -19,7 +19,7 @@
 	<li>Neural Networks</li>
 </ul>
 
-
+##### Python and a little bit of R
 
 
 
